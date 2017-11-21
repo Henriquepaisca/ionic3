@@ -21,8 +21,8 @@ export class MoovieProvider {
 
   }
 
-  getLatestMovies() {
-    return this.http.get(this.baseApiPath + "/movie/popular?api_key=7d6517c4b74e82c280f4868e793e1aad");
+  getLatestMovies(page = 1) {
+    return this.http.get(this.baseApiPath + `/movie/popular?page=${page}&api_key=7d6517c4b74e82c280f4868e793e1aad`);
   }
 
 
